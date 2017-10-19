@@ -14,7 +14,7 @@ def create_snail_matrix(size):
         (0, 1),  # down
         (-1, 0),  # left
         (0, -1),  # up
-        (1, 0)])  # rigth
+        (1, 0)])  # right
 
     direction_change_count = 2
     for i in range(size):
