@@ -1,7 +1,9 @@
-# Snail matrix example
-Create a snail/spiral matrix in python
+# Summary
+Example of how to create a snail/spiral matrix in python
 
-## View
+## Matrix view
 9 8 7 <br>
 2 1 6 <br>
 3 4 5
+
+## Snapshot
