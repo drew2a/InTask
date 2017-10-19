@@ -15,7 +15,7 @@ Find a pair of elements from an array whose sum equals a given number: <br>
 <br>Source: ![tuples_in_array.py](tuples_in_array.py)
 
 ## Anagram
-Check for anagrams
+Check for anagrams (case sensitive)
 <br>Source: ![anagram.py](anagram.py)
 
 ## Screenshot
