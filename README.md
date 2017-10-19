@@ -7,4 +7,4 @@ Example of how to create a snail/spiral matrix in python
 3 4 5
 
 ## Screenshot
-![screenshot](screenshot.png)
+![screenshot](screenshot.jpg)
