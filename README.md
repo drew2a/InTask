@@ -11,7 +11,7 @@ Example of how to create matrix like this: <br>
 <br>Source: ![snail.py](snail.py)
 
 ## Tuples
-Find a pair of elements from an array whose sum equals a given number: <br>
+Find a pair of elements from an array whose sum equals a given number:
 <br>Source: ![tuples_in_array.py](tuples_in_array.py)
 
 ## Anagram
