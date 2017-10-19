@@ -6,4 +6,5 @@ Example of how to create a snail/spiral matrix in python
 2 1 6 <br>
 3 4 5
 
-## Snapshot
+## Screenshot
+![screenshot](screenshot.png)
