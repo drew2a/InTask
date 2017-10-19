@@ -16,13 +16,12 @@ def create_snail_matrix(size):
         (0, -1),  # up
         (1, 0)])  # right
 
-    direction_change_count = 2
     for i in range(size):
         matrix[0][i] = n - i
 
     n -= ix
     for step in range(size - 1, 0, -1):
-        for direction_change in range(direction_change_count):
+        for direction_change in range(2):
             direction = next(directions)
             for index in range(step):
                 ix, iy = ix + direction[0], iy + direction[1]
@@ -30,7 +29,3 @@ def create_snail_matrix(size):
                 matrix[iy][ix] = n
 
     return matrix
-
-
-_matrix = create_snail_matrix(10)
-print_matrix(_matrix)
