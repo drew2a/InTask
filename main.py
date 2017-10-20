@@ -1,7 +1,4 @@
-import array_tasks
-import matrix_tasks
-
-from task import string_tasks
+from task import string_tasks, array_tasks, matrix_tasks
 
 # snail/spiral matrix
 _matrix_size = 5
