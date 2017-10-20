@@ -14,7 +14,7 @@ def random_array(size, limit=10):
         yield randrange(0, limit)
 
 
-def find_tuples(array, value):
+def find_pairs(array, value):
     result = []
     digits = dict()
 
@@ -35,3 +35,7 @@ def find_tuples(array, value):
                     del digits[second]
 
     return result
+
+
+def merge(array1, array2, condition):
+    return list(filter(condition, array1)) + list(filter(condition, array2))

@@ -1,21 +1,22 @@
-import anagram
-import snail
-import tuples_in_array
+import array_tasks
+import matrix_tasks
+
+from task import string_tasks
 
 # snail/spiral matrix
 _matrix_size = 5
-_matrix = snail.create_snail_matrix(_matrix_size)
+_matrix = matrix_tasks.create_snail_matrix(_matrix_size)
 
 print("\n\nSpiral matrix({}):".format(_matrix_size))
-snail.print_matrix(_matrix)
+matrix_tasks.print_matrix(_matrix)
 
 # tuples in array
 _sum = 10
-_list = list(tuples_in_array.random_array(20))
-_tuples = tuples_in_array.find_tuples(_list, _sum)
+_list = list(array_tasks.random_array(20))
+_pairs = array_tasks.find_pairs(_list, _sum)
 
 print("\n\nArray: " + str(_list))
-print("Tuples (with sum {}): {}".format(_sum, _tuples))
+print("Pairs (with sum {}): {}".format(_sum, _pairs))
 
 # anagram
 _examples = [("one", "two"),
@@ -23,4 +24,4 @@ _examples = [("one", "two"),
              ("one", "one")]
 
 print('\n\nIs anagram: ')
-print('\n'.join('{}'.format((e[0], e[1], anagram.check(e[0], e[1]))) for e in _examples))
+print('\n'.join('{}'.format((e[0], e[1], string_tasks.check(e[0], e[1]))) for e in _examples))
