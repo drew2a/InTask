@@ -37,5 +37,15 @@ def find_pairs(array, value):
     return result
 
 
+def array_left_rotation(a, k):
+    n = len(a)
+    start = k % n
+    for i in range(start, n):
+        yield a[i]
+
+    for i in range(0, start):
+        yield a[i]
+
+
 def merge(array1, array2, condition):
     return list(filter(condition, array1)) + list(filter(condition, array2))

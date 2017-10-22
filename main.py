@@ -15,6 +15,10 @@ _pairs = array_tasks.find_pairs(_list, _sum)
 print("\n\nArray: " + str(_list))
 print("Pairs (with sum {}): {}".format(_sum, _pairs))
 
+_list = [1, 2, 3, 4, 5]
+print("\n\n{:<25}{}".format("Array:", _list))
+print("{:<25}{}".format("Left rotated array (2):", list(array_tasks.array_left_rotation(_list, 2))))
+
 # anagram
 _examples = [("one", "two"),
              ("one", "eon"),
