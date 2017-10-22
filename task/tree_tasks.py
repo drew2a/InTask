@@ -23,7 +23,7 @@ def check_binary_search_tree(root):
     if root is None:
         return False
 
-    duplicates = {root.data}
+    closed = {root.data}
     opened = []
     if root.left is not None:
         opened.append(ExtendedNode(root.left, -sys.maxsize, root.data))
@@ -36,9 +36,9 @@ def check_binary_search_tree(root):
             source_node = ex_node.source_node
             data = source_node.data
 
-            if not ex_node.min_value < data < ex_node.max_value or data in duplicates:
+            if not ex_node.min_value < data < ex_node.max_value or data in closed:
                 return False
-            duplicates.add(data)
+            closed.add(data)
 
             if source_node.left is not None:
                 next_opened.append(ExtendedNode(source_node.left, min(data, ex_node.min_value), data))
