@@ -14,6 +14,10 @@ Example of how to create matrix like this: <br>
 Find a pair of elements from an array whose sum equals a given number:
 <br>Source: ![array_tasks.py](task/array_tasks.py)
 
+## Left rotation
+Example of a left rotation operation on an array: 
+<br>Source: ![array_tasks.py](task/array_tasks.py)
+
 ## Anagram
 Check for anagrams (case sensitive)
 <br>Source: ![string_tasks.py](task/string_tasks.py)
