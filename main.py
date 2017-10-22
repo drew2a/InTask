@@ -1,4 +1,4 @@
-from task import string_tasks, array_tasks, matrix_tasks
+from task import string_tasks, array_tasks, matrix_tasks, tree_tasks
 
 # snail/spiral matrix
 _matrix_size = 5
@@ -26,3 +26,8 @@ _examples = [("one", "two"),
 
 print('\n\nIs anagram: ')
 print('\n'.join('{}'.format((e[0], e[1], string_tasks.check(e[0], e[1]))) for e in _examples))
+
+# tree
+_tree = tree_tasks.create_sample_tree()
+print('\n\nTree: ' + str(_tree))
+print('Is binary search tree? ' + str(tree_tasks.check_binary_search_tree(_tree)))
