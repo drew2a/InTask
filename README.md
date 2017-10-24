@@ -18,6 +18,10 @@ Find a pair of elements from an array whose sum equals a given number:
 Example of a left rotation operation on an array: 
 <br>Source: ![array_tasks.py](task/array_tasks.py)
 
+## Sub array with max sum
+How to find sub array with max sum: 
+<br>Source: ![array_tasks.py](task/array_tasks.py)
+
 ## Print numbers can be divided by 3 and can not be divided by 5...
 Example how to find numbers can be divided by 3 and can not be divided by 5.
 Sum of all digits in each number is less than 10.

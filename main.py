@@ -1,6 +1,7 @@
 from task import string_tasks, array_tasks, matrix_tasks, tree_tasks
 
 # snail/spiral matrix
+
 _matrix_size = 5
 _matrix = matrix_tasks.create_snail_matrix(_matrix_size)
 
@@ -21,6 +22,10 @@ print("{:<25}{}".format("Left rotated array (2):", list(array_tasks.array_left_r
 
 print("\n\nPrint numbers can be divided by 3 and can not be divided by 5. Sum of all digits in a number is less than 10:")
 print(list(array_tasks.create_3_5_10_array(40)))
+
+_list = [1, 2, -2, -3, 0, 0, 9, -1, 5, 2]
+print('\n\nArray: {}'.format(_list))
+print('Subarray with max sum: {}\n'.format(list(array_tasks.max_sum_sub_array(_list))))
 
 # anagram
 _examples = [("one", "two"),
