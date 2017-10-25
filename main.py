@@ -1,4 +1,4 @@
-from task import string_tasks, array_tasks, matrix_tasks, tree_tasks
+from task import string_tasks, array_tasks, matrix_tasks, tree_tasks, sequence_tasks
 
 # snail/spiral matrix
 
@@ -21,7 +21,7 @@ print("\n\n{:<25}{}".format("Array:", _list))
 print("{:<25}{}".format("Left rotated array (2):", list(array_tasks.array_left_rotation(_list, 2))))
 
 print("\n\nPrint numbers can be divided by 3 and can not be divided by 5. Sum of all digits in a number is less than 10:")
-print(list(array_tasks.create_3_5_10_array(40)))
+print(list(sequence_tasks.create_3_5_10_array(40)))
 
 _list = [1, 2, -2, -3, 0, 0, 9, -1, 5, 2]
 print('\n\nArray: {}'.format(_list))
