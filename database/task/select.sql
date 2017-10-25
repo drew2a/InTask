@@ -1,6 +1,6 @@
 -- select all departments with conditions:
--- 1. all computers have ram>=8
--- 2. department have only  MAC's
+-- 1. All computers in a department have ram>=8
+-- 2. A department have only  MAC's
 SELECT DEPARTMENT
 FROM COMPUTERS
 GROUP BY DEPARTMENT
