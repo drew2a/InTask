@@ -23,6 +23,9 @@ print("{:<25}{}".format("Left rotated array (2):", list(array_tasks.array_left_r
 print("\n\nPrint numbers can be divided by 3 and can not be divided by 5. Sum of all digits in a number is less than 10:")
 print(list(sequence_tasks.create_3_5_10_array(40)))
 
+print("\n\nSieve of eratosthenes:")
+print(list(sequence_tasks.sieve_of_eratosthenes(50)))
+
 _list = [1, 2, -2, -3, 0, 0, 9, -1, 5, 2]
 print('\n\nArray: {}'.format(_list))
 print('Subarray with max sum: {}\n'.format(list(array_tasks.max_sum_sub_array(_list))))
