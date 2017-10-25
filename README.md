@@ -3,7 +3,7 @@ My implementation of a several programming tasks from interview.
 
 All examples: ![main.py](main.py)
 
-#Matrices
+# Matrices
 ## Spiral/snail matrix
 Example of how to create matrix like this: <br>
 9 8 7 <br>
@@ -14,7 +14,7 @@ def create_snail_matrix(size):
 ```
 <br>Source: ![matrix_tasks.py](task/matrix_tasks.py)
 
-#Arrays
+# Arrays
 ## Pairs
 Find a pair of elements from an array whose sum equals a given number:
 ```python
@@ -36,7 +36,7 @@ def max_sum_sub_array(given_array):
 ```
 <br>Source: ![array_tasks.py](task/array_tasks.py)
 
-#Sequences
+# Sequences
 ## Print numbers can be divided by 3 and can not be divided by 5...
 Example how to find numbers can be divided by 3 and can not be divided by 5.
 Sum of all digits in each number is less than 10.
@@ -46,7 +46,7 @@ def create_3_5_10_array(n):
 <br>Source: ![sequence_tasks.py](task/sequence_tasks.py)
 
 
-#Trees
+# Trees
 ## Binary search tree
 Check is this a binary search tree:
 ```python
@@ -54,7 +54,7 @@ def check_binary_search_tree(root):
 ```
 <br>Source: ![tree_tasks.py](task/tree_tasks.py)
 
-#Strings
+# Strings
 ## Anagram
 Check for anagrams (case sensitive)
 ```python
@@ -62,7 +62,7 @@ def check(s1, s2):
 ```
 <br>Source: ![string_tasks.py](task/string_tasks.py)
 
-#sql
+# sql
 # group by with having clause
 Select all departments with conditions:
 1. All computers in a department have ram>=8
