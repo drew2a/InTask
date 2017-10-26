@@ -10,6 +10,13 @@ Example of how to create matrix like this: <br>
 2 1 6 <br>
 3 4 5 
 ```python
+# size = 5
+# answer:
+# 25    24    23    22    21  
+# 10     9     8     7    20  
+# 11     2     1     6    19  
+# 12     3     4     5    18  
+# 13    14    15    16    17 
 def create_snail_matrix(size):
 ```
 <br>Source: ![matrix_tasks.py](task/matrix_tasks.py)
