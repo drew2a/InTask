@@ -27,7 +27,7 @@ def create_snail_matrix(size):
 How many water given bars will collect?
 ```python
 # array = [1, 2, 0, 1, 3, 1]
-# Answer: 3
+# answer: 3
 #
 #|  |  |  |  |oo|  |
 #|  |oo|~~|~~|oo|  |
