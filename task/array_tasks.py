@@ -101,7 +101,7 @@ def max_sum_sub_array(given_array):
 def print_bars(bars, water):
     max_bar = max(bars)
     for h in range(max_bar, 0, -1):
-        line = ''
+        line = '|'
         for index in range(len(bars)):
             if bars[index] < h and water[index] < h:
                 line += '  '
@@ -112,7 +112,7 @@ def print_bars(bars, water):
             line += '|'
 
         print(line)
-    line = ''
+    line = ' '
     for i in range(len(bars)):
         line += '{:^3}'.format(i)
     print(line)

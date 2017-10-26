@@ -15,6 +15,22 @@ def create_snail_matrix(size):
 <br>Source: ![matrix_tasks.py](task/matrix_tasks.py)
 
 # Arrays
+
+## Google problem with bars:
+How many water given bars will collect?
+```python
+# array = [1, 2, 0, 1, 3, 1]
+# Answer: 3
+#
+#|  |  |  |  |oo|  |
+#|  |oo|~~|~~|oo|  |
+#|oo|oo|~~|oo|oo|oo|
+#  0  1  2  3  4  5 
+
+def find_water_count(array):
+```
+<br>Source: ![array_tasks.py](task/array_tasks.py)
+
 ## Pairs
 Find a pair of elements from an array whose sum equals a given number:
 ```python
