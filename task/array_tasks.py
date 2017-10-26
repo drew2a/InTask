@@ -132,13 +132,16 @@ def find_water_count(array):
     for extrem_index in range(len(extremes) - 1):
         first_extrem = extremes[extrem_index]
         second_extrem = extremes[extrem_index + 1]
-        min_extrem_value = min(first_extrem[1], second_extrem[1])
+        second_extrem_value = second_extrem[1]
+        if second_extrem_value < water_array[second_extrem[0]]:
+            continue
+
         increment = 1 if first_extrem[0] < second_extrem[0] else -1
         print('\nMove: {}->{}'.format(first_extrem[0], second_extrem[0]))
         for array_index in range(first_extrem[0] + increment, second_extrem[0], increment):
-            if water_array[array_index] < min_extrem_value:
-                total_water_count += min_extrem_value - water_array[array_index]
-                water_array[array_index] = min_extrem_value
+            if water_array[array_index] < second_extrem_value:
+                total_water_count += second_extrem_value - water_array[array_index]
+                water_array[array_index] = second_extrem_value
 
         print_bars(array, water_array)
 
