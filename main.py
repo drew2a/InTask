@@ -42,3 +42,6 @@ print('\n'.join('{}'.format((e[0], e[1], string_tasks.check(e[0], e[1]))) for e 
 _tree = tree_tasks.create_sample_tree()
 print('\n\nTree: ' + str(_tree))
 print('Is binary search tree? ' + str(tree_tasks.check_binary_search_tree(_tree)))
+print('\n\n\n')
+print('\nWater: {}\n\n--------------------------------------------\n\n'.format(array_tasks.find_water_count([0, 1, 2, 1, 2, 3, 4, 3, 4, 1, 1, 8, 1, 2, 4, 3, 5])))
+print('\nWater: {}\n\n--------------------------------------------\n\n'.format(array_tasks.find_water_count([5, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 4])))
