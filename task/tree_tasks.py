@@ -53,16 +53,75 @@ def check_binary_search_tree(root):
 
 def create_sample_tree():
     tree = Node(8)
-    tree.left = Node(4)
-    tree.right = Node(13)
 
+    tree.left = Node(4)
     tree.left.left = Node(2)
     tree.left.right = Node(6)
-
-    tree.right.left = Node(10)
-    tree.right.right = Node(14)
-
     tree.left.left.left = Node(1)
     tree.left.left.right = Node(3)
 
+    tree.right = Node(13)
+    tree.right.left = Node(10)
+    tree.right.right = Node(14)
+
     return tree
+
+
+def __get_lowest_common_ancestor(target_nodes, reverse_links):
+    node1 = target_nodes[0]
+    node2 = target_nodes[1]
+
+    node1_level = reverse_links[node1][1]
+    node2_level = reverse_links[node2][1]
+    if node1_level > node2_level:
+        for i in range(node1_level - node2_level):
+            node1 = reverse_links[node1][0]
+    else:
+        for i in range(node2_level - node1_level):
+            node2 = reverse_links[node2][0]
+
+    while node1 is not None and node2 is not None:
+        if node1.data == node2.data:
+            return node1.data
+        node1 = reverse_links[node1][0]
+        node2 = reverse_links[node2][0]
+
+    return -1
+
+
+def get_path(root, a):
+    if root is None:
+        return []
+
+    if root.data == a:
+        return [root.data]
+
+    left_path = get_path(root.left, a)
+    if len(left_path) != 0:
+        return [root.data] + left_path
+
+    right_path = get_path(root.right, a)
+    if len(right_path) != 0:
+        return [root.data] + right_path
+
+    return []
+
+
+def get_lowest_common_ancestor(root, a, b):
+    if root is None:
+        return -1
+
+    path_a = get_path(root, a)
+    if a == b:
+        return a
+    path_b = get_path(root, b)
+
+    min_len = min(len(path_a), len(path_b))
+    if min_len == 0:
+        return -1
+
+    for i in range(min_len):
+        if path_a[i] != path_b[i]:
+            return path_a[i - 1]
+
+    return path_a[min_len - 1]

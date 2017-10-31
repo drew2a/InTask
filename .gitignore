@@ -1,3 +1,4 @@
 .idea/*
 *.iml
 database/.log
+task/draft.py
