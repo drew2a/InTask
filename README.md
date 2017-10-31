@@ -99,14 +99,14 @@ def check_binary_search_tree(root):
 ```
 <br>Source: ![tree_tasks.py](task/tree_tasks.py)
 
-##Lowest common ancestor
+## Lowest common ancestor
 Example of finding a lowest common ancestor:
 ```python
 # root = 8(4(2(1(None, None), 3(None, None)), 6(None, None)), 13(10(None, None), 14(None, None)))
 # a: 6
 # b: 1
 # answer: 4
-def get_lowest_common_ancestor(root):
+def get_lowest_common_ancestor(root, a, b):
 ```
 <br>Source: ![tree_tasks.py](task/tree_tasks.py)
 
