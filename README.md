@@ -122,12 +122,5 @@ def check(s1, s2):
 ```
 <br>Source: ![string_tasks.py](task/string_tasks.py)
 
-# sql
-# group by with having clause
-Select all departments with conditions:
-1. All computers in a department have ram>=8
-2. A department have only  MAC's
-<br>Source: ![select.sql](database/task/select.sql)
-
 ## Screenshot
 ![screenshot](screenshot.jpg)
