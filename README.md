@@ -122,7 +122,7 @@ def check(s1, s2):
 ```
 <br>Source: ![string_tasks.py](task/string_tasks.py)
 
-## Find first nor recurring character
+## Find first not recurring character
 ```python
 # s = ABACDBCEAB
 # answer: D
