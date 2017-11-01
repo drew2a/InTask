@@ -38,6 +38,8 @@ _examples = [("one", "two"),
 print('\n\nIs anagram: ')
 print('\n'.join('{}'.format((e[0], e[1], string_tasks.check(e[0], e[1]))) for e in _examples))
 
+print('\n\nFirst not recurring character(ABACDBCEAB): ', string_tasks.find_first_not_recurring_character('ABACDBCEAB'))
+
 # tree
 _tree = tree_tasks.create_sample_tree()
 print('\n\nTree: ' + str(_tree))
