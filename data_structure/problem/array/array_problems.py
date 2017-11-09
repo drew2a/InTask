@@ -167,3 +167,23 @@ def find_extremes(array):
         extremes.append((size - 1, array[size - 1]))
 
     return sorted(extremes, key=lambda t: t[1], reverse=True)
+
+
+def calculate_jumps(a):
+    if a is None or len(a) == 0:
+        return -1
+
+    size = len(a)
+    jump_count = 0
+    i = 0
+    while jump_count < size:
+        jump_count += 1
+
+        if a[i] == 0:
+            return -1
+
+        i = i + a[i]
+        if i >= size or i < 0:
+            return jump_count
+
+    return -1
