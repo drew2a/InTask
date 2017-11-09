@@ -69,3 +69,22 @@ def number_needed(a, b):
         dictionary[ch] -= 1
 
     return sum(map(lambda item: abs(item), dictionary.values()))
+
+
+def is_balanced(expression):
+    stack = ['']
+    pairs = {']': '[',
+             ')': '(',
+             '}': '{'}
+
+    for bracket in expression:
+        if bracket not in pairs:
+            stack.append(bracket)
+            continue
+
+        if pairs[bracket] == stack[-1]:
+            stack.pop()
+        else:
+            return False
+
+    return len(stack) == 1
