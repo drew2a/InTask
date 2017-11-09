@@ -1,6 +1,6 @@
 import math
 
-from task.array_tasks import extract_digits
+from data_structure.problem import extract_digits
 
 
 def create_3_5_10_array(n):
