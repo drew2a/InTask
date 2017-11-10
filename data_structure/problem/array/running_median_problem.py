@@ -1,75 +1,16 @@
-class Item:
-    def __init__(self, value, prev=None):
-        self.value = value
-        self.next = None
-        self.prev = prev
-
-    def __str__(self):
-        return str(self.value)
+import random
+from bisect import bisect_left
 
 
 class RunningMediane:
     def __init__(self):
-        self.__list = None
-        self.__left_border = None
-        self.__right_border = None
-        self.__mediane = None
-        self.__len = 0
+        self.__sorted = []
 
     def __str__(self):
-        pointer = self.__list
-        s = ''
-
-        while pointer is not None:
-            s += str(pointer.value) + ' '
-            pointer = pointer.next
-
-        return s
-
-    def __add(self, value):
-        if self.__list is None:
-            self.__list = Item(value)
-            self.__mediane = self.__list
-            return 0
-
-        pointer = self.__list
-        move = -1
-        while pointer is not None:
-            if value > pointer.value:
-                item = Item(pointer.value, pointer)
-                item.next = pointer.next
-                if pointer.next is not None:
-                    pointer.next.prev = item
-
-                pointer.value = value
-                pointer.next = item
-
-                return 0 if pointer == self.__mediane else move
-
-            if pointer == self.__mediane:
-                move = 1
-
-            if pointer.next is None:
-                pointer.next = Item(value, pointer)
-                break
-
-            pointer = pointer.next
-
-        return move
+        return str(self.__sorted)
 
     def add(self, value):
-        move_increment = self.__add(value)
-        self.__len += 1
-
-        if self.__len == 1:
-            return self
-
-        odd = self.__len % 2 != 0
-        if odd and move_increment >= 0:
-            self.__mediane = self.__mediane.next
-        if not odd and move_increment < 0:
-            self.__mediane = self.__mediane.prev
-
+        self.__sorted.insert(bisect_left(self.__sorted, value), value)
         return self
 
     @staticmethod
@@ -77,21 +18,21 @@ class RunningMediane:
         return int(f * 10) / 10
 
     def calculate(self):
-        if self.__len == 0:
+        size = len(self.__sorted)
+        if size == 0:
             return 0
 
-        if self.__len % 2 == 0:
-            return RunningMediane.scale(self.__mediane.value + self.__mediane.next.value) / 2
-
-        return RunningMediane.scale(self.__mediane.value)
+        half = int(size / 2)
+        if size % 2 != 0:
+            return RunningMediane.scale(self.__sorted[half])
+        return RunningMediane.scale((self.__sorted[half] + self.__sorted[half - 1]) / 2)
 
     @staticmethod
     def test_it():
         mediane = RunningMediane()
-        mediane.add(1)
-        mediane.add(7)
-        mediane.add(3)
-        mediane.add(14)
+
+        for i in range(10):
+            mediane.add(random.randint(0, 10))
         print(mediane)
 
         assert 1.0 == RunningMediane.scale(1)
