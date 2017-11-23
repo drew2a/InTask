@@ -1,11 +1,18 @@
--- select all departments with conditions:
--- 1. All computers in a department have ram>=8
--- 2. A department have only  MAC's
-SELECT DEPARTMENT
-FROM COMPUTERS
-GROUP BY DEPARTMENT
-HAVING min(RAM) >= 8 AND
-       0 = count(CASE WHEN TYPE = 'PC'
-         THEN 1
-                        ELSE NULL END)
+SELECT
+  d.dept_id,
+  e.c,
+  sum_of_salary
+FROM (
+       SELECT
+         dept_id,
+         count(*)             AS c,
+         sum(EMPLOYEE.SALARY) AS sum_of_salary
+       FROM EMPLOYEE
+       GROUP BY dept_id
+       ORDER BY DEPT_ID) AS e
+  JOIN DEPARTMENT AS d
+    ON e.DEPT_ID = d.dept_id
+WHERE e.c > 0
+
+
 
