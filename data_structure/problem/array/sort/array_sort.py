@@ -56,6 +56,16 @@ def quick_sort(lo, hi, a):
     return a
 
 
+def counting_sort(a):
+    counts = [0] * (max(a) + 1)
+
+    for element in a:
+        counts[element] += 1
+    for i, value in enumerate(counts):
+        for _ in range(value):
+            yield i
+
+
 _experiment_count = 5
 _small_array_size = 10
 _big_array_size = 1000
@@ -76,4 +86,8 @@ print('Insertion sort: ', timeit.timeit('insertion_sort(list(_big_array))', numb
 print(_line)
 print('Quick sort: {}'.format(quick_sort(0, len(_small_array) - 1, _small_array[:])))
 print('Quick sort: ', timeit.timeit('quick_sort(0, len(_big_array)-1, list(_big_array))', number=_experiment_count, setup="from __main__ import quick_sort,_big_array"))
+print(_line)
+
+print('Counting sort: {}'.format(list(counting_sort(_small_array[:]))))
+print('Counting sort: ', timeit.timeit('list(counting_sort(list(_big_array)))', number=_experiment_count, setup="from __main__ import counting_sort,_big_array"))
 print(_line)
