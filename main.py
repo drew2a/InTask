@@ -1,7 +1,9 @@
+import random
+
 from data_structure.problem.array import array_problems
-from data_structure.problem.string import string_problems
 from data_structure.problem.matrix import matrix_problems
 from data_structure.problem.sequence import sequence_problems
+from data_structure.problem.string import string_problems
 from data_structure.problem.tree import tree_problems
 
 # snail/spiral matrix
@@ -12,6 +14,16 @@ _matrix = matrix_problems.create_snail_matrix(_matrix_size)
 print("\n\nSpiral matrix({}):".format(_matrix_size))
 matrix_problems.print_matrix(_matrix)
 
+print("\n\nSpiral Matrix Sorting:")
+random_matrix = [[random.randint(1, 20) for _ in range(5)] for _ in range(5)]
+print("Given: ")
+matrix_problems.print_matrix(random_matrix)
+
+print("\nResult: ")
+matrix_problems.sort_snail_matrix(random_matrix)
+matrix_problems.print_matrix(random_matrix)
+
+print("-" * 80)
 # tuples in array
 _sum = 10
 _list = list(array_problems.random_array(20))
