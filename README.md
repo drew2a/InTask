@@ -31,6 +31,29 @@ def create_snail_matrix(size):
 ```
 <br>Source: [matrix_problems.py](data_structure/problem/matrix/matrix_problems.py)
 
+##### Spiral/snail Matrix Sorting
+
+Given an NxN array, write a function that will return an array where they are 
+sorted such that you spiral clockwise inward:
+
+```python
+# Given:
+# 16     4     5     4     6
+#  4    18    20     5    10
+# 20     2     2     1    19
+#  3     3     4     6    15
+# 20     8    14    20    13
+# 
+# Result:
+#  1     2     2     3     3
+# 13    14    15    16     4
+# 10    20    20    18     4
+#  8    20    20    19     4
+#  6     6     5     5     4  
+def sort_snail_matrix(matrix):
+```
+<br>Source: [matrix_problems.py](data_structure/problem/matrix/matrix_problems.py)
+
 ### Arrays
 
 #### Google problem with bars:

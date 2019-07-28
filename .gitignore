@@ -2,3 +2,5 @@
 *.iml
 database/.log
 database/problem/draft.py
+
+*.pyc
