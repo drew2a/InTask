@@ -52,13 +52,13 @@ def create_snail_matrix2(size):
 
 
 def sort_snail_matrix(matrix):
-    # sort the array (quick sort, why not?)
-    quick_sort_array = []
+    # sort the array (сounting sort, why not?)
+    counting_sort_array = []
     for item in itertools.chain(*matrix):
-        array_len = len(quick_sort_array)
+        array_len = len(counting_sort_array)
         if item >= array_len:
-            quick_sort_array.extend(itertools.repeat(0, times=item - array_len + 1))
-        quick_sort_array[item] += 1
+            counting_sort_array.extend(itertools.repeat(0, times=item - array_len + 1))
+        counting_sort_array[item] += 1
 
     # fill the matrix
     x_directions = itertools.cycle([0, 1, 0, -1])
@@ -69,8 +69,8 @@ def sort_snail_matrix(matrix):
         for line in range(2):
             for _ in range(corner - line):
                 x, y = x + x_increment, y + y_increment
-                while quick_sort_array[i] <= 0 and i + 1 < len(quick_sort_array):
+                while counting_sort_array[i] <= 0 and i + 1 < len(counting_sort_array):
                     i += 1
                 matrix[x][y] = i
-                quick_sort_array[i] -= 1
+                counting_sort_array[i] -= 1
             x_increment, y_increment = next(x_directions), next(y_directions)
