@@ -72,6 +72,18 @@ def find_water_count(array):
 ```
 <br>Source: [array_problems.py](data_structure/problem/array/array_problems.py)
 
+#### Bolt problem with fountains:
+What min numbers of fountains should be opened, for filling whole lawn:
+
+```python
+#    --- .... ------   ------..
+# \|/   /    \      \|/ \
+# [3, 1, 1, 2, 1, 0, 4, 0, 0, 3]
+# Result 2
+def found_min_required_fountains(a):
+```
+<br>Source: [fountain.py](data_structure/problem/array/fountain.py)
+
 #### Pairs
 
 Find a pair of elements from an array whose sum equals a given number:
