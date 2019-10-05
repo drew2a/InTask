@@ -1,3 +1,4 @@
+# task from https://www.hackerrank.com/test/2ocejn4tppb/a3f396f86532452b0cfc3ef973a0d989
 def visualize_fountain(a, points):
     fountains1 = ["---"] * len(a)
     fountains2 = ["   "] * len(a)
@@ -60,3 +61,13 @@ print("Result " + str(found_min_required_fountains([1, 1, 2, 1, 1])))
 print("Result " + str(found_min_required_fountains([3, 1, 1, 2, 1, 0, 4, 0, 0, 3])))
 print("Result " + str(found_min_required_fountains([3, 1, 1, 2, 1, 0, 2, 0, 0, 3])))
 print("Result " + str(found_min_required_fountains([1, 1, 2, 1, 3, 1, 1, 1, 1, 4, 1, 1, 1, 1, 3, 1, 2, 1, 1])))
+
+#  ..   ..
+# /  \|/ \
+# [1, 1, 1]
+# Result 1
+
+#    --- .... ------   ------..
+# \|/   /    \      \|/ \
+# [3, 1, 1, 2, 1, 0, 4, 0, 0, 3]
+# Result 2
